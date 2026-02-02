@@ -1,0 +1,103 @@
+.pricing-section {
+    padding: var(--spacing-section) 0;
+    background: var(--bg-surface);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.pricing-card {
+    background: var(--bg-surface);
+    padding: 3.5rem 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card.featured {
+    border-color: var(--primary);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    z-index: 2;
+    background: linear-gradient(135deg, var(--bg-surface) 0%, rgba(var(--primary-rgb), 0.05) 100%);
+}
+
+.pricing-card.featured::before {
+    content: "Recommended";
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.5rem 3rem;
+    transform: rotate(45deg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.plan-name {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.plan-price {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+    color: var(--text-main);
+    line-height: 1;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem 0;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-dim);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.plan-features li::before {
+    content: "→";
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.07) translateY(-10px);
+}
+
+@media (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

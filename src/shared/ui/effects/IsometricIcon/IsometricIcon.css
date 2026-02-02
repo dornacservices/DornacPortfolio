@@ -1,0 +1,86 @@
+.iso-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(45deg);
+    margin: 0 auto 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+.iso-icon-wrapper:hover {
+    transform: rotateX(-30deg) rotateY(45deg) translateY(-10px);
+}
+
+.iso-shape {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+}
+
+.face {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Cube Faces */
+.face.top {
+    transform: rotateX(90deg) translateZ(20px);
+    background: var(--primary-light);
+    opacity: 0.8;
+}
+
+.face.left {
+    transform: rotateY(-90deg) translateZ(20px);
+    background: var(--primary);
+    opacity: 0.6;
+}
+
+.face.right {
+    transform: translateZ(20px);
+    background: var(--primary-dark);
+    opacity: 0.4;
+}
+
+/* Colors */
+.iso-icon-wrapper.primary .face.top {
+    background: #dcd6f7;
+}
+
+.iso-icon-wrapper.primary .face.left {
+    background: #a6b1e1;
+}
+
+.iso-icon-wrapper.primary .face.right {
+    background: #424874;
+}
+
+.iso-icon-wrapper.secondary .face.top {
+    background: #ffdde1;
+}
+
+.iso-icon-wrapper.secondary .face.left {
+    background: #ee9ca7;
+}
+
+.iso-icon-wrapper.secondary .face.right {
+    background: #ff6b6b;
+}
+
+.iso-icon-wrapper.accent .face.top {
+    background: #e0f7fa;
+}
+
+.iso-icon-wrapper.accent .face.left {
+    background: #4dd0e1;
+}
+
+.iso-icon-wrapper.accent .face.right {
+    background: #00acc1;
+}

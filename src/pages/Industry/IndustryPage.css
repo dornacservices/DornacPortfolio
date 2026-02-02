@@ -1,0 +1,91 @@
+.industry-hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
+}
+
+.page-h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 1rem 0;
+    color: var(--text-main);
+}
+
+.page-h1-sub {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.industry-grid-new {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+
+.ritovex-highlight-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 200px;
+}
+
+.ritovex-highlight-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-idx {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    font-weight: 800;
+    opacity: 0.1;
+    color: var(--primary);
+}
+
+.ritovex-highlight-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    max-width: 80%;
+}
+
+.card-line {
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--primary);
+    transition: width 0.4s ease;
+}
+
+.ritovex-highlight-card:hover .card-line {
+    width: 100%;
+}
+
+.industry-cta-section {
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 80px;
+}
+
+.industry-cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.industry-cta-section p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}

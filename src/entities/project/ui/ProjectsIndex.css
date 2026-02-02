@@ -1,0 +1,318 @@
+.projects-index-page {
+    padding: 140px 0 10rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.page-background-elements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glow-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.1;
+}
+
+.glow-1 {
+    top: -10%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: var(--primary);
+}
+
+.glow-2 {
+    bottom: 5%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: var(--secondary);
+}
+
+.page-navigation {
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 100;
+}
+
+.projects-index-page .page-header {
+    margin-bottom: 6rem;
+    position: relative;
+    z-index: 1;
+}
+
+.projects-index-page .page-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    margin: 1.5rem 0;
+    color: var(--text-main);
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.projects-index-page .page-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.projects-grid {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+.projects-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+    background: var(--bg-surface);
+    border-radius: var(--radius-pill);
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: var(--radius-pill);
+}
+
+.projects-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+}
+
+.project-index-card {
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-2xl);
+    padding: 0;
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    overflow: hidden;
+    min-width: 380px;
+    max-width: 380px;
+    flex-shrink: 0;
+}
+
+.project-index-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-light);
+}
+
+.card-visual {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project-index-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(139, 92, 246, 0.3);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all var(--transition-base);
+}
+
+.project-index-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.view-text {
+    color: white;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project-index-card:hover .view-text {
+    transform: translateY(0);
+}
+
+.project-category-tag {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: white;
+    color: var(--text-main);
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: var(--shadow-md);
+    z-index: 2;
+}
+
+.card-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-index-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+}
+
+.project-index-card .card-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-footer .learn-more {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all var(--transition-fast);
+}
+
+.project-index-card:hover .learn-more {
+    color: var(--primary-dark);
+}
+
+.project-index-card:hover .learn-more svg {
+    transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+    .project-index-card {
+        min-width: 320px;
+        max-width: 320px;
+    }
+
+    .card-visual {
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-index-page {
+        padding: 120px 0 6rem;
+    }
+
+    .projects-index-page .page-header {
+        margin-bottom: 4rem;
+    }
+
+    .project-index-card {
+        min-width: 280px;
+        max-width: 280px;
+    }
+
+    .project-index-card .card-content {
+        padding: 1.5rem;
+    }
+
+    .card-visual {
+        height: 200px;
+    }
+
+    .projects-index-page .page-title {
+        font-size: 2.5rem;
+    }
+
+    .projects-index-page .page-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-index-page {
+        padding: 100px 0 4rem;
+    }
+
+    .projects-index-page .page-header {
+        margin-bottom: 3rem;
+    }
+
+    .page-navigation {
+        margin-bottom: 2rem;
+    }
+
+    .projects-index-page .page-subtitle {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .project-index-card {
+        min-width: 260px;
+        max-width: 260px;
+    }
+
+    .project-index-card .card-content {
+        padding: 1.25rem;
+    }
+
+    .project-index-card .card-title {
+        font-size: 1.3rem;
+    }
+
+    .project-index-card .card-desc {
+        font-size: 0.95rem;
+    }
+
+    .card-visual {
+        height: 180px;
+    }
+
+    .project-category-tag {
+        top: 1.5rem;
+        left: 1.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .glow-circle {
+        filter: blur(80px);
+    }
+
+    .glow-1,
+    .glow-2 {
+        width: 400px;
+        height: 400px;
+    }
+}

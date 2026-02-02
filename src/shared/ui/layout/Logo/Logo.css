@@ -1,0 +1,95 @@
+.dornac-logo-wrapper {
+    position: relative;
+}
+
+/* Seamless rotation on the accent node */
+.dornac-logo-wrapper svg circle:last-of-type {
+    transform-origin: center;
+    animation: logo-rotate 8s linear infinite;
+}
+
+@keyframes logo-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Smooth vertical line animation */
+.dornac-logo-wrapper svg path:nth-of-type(2) {
+    stroke-dasharray: 16;
+    stroke-dashoffset: 16;
+    animation: logo-line-draw 3s ease-in-out infinite;
+}
+
+@keyframes logo-line-draw {
+
+    0%,
+    100% {
+        stroke-dashoffset: 16;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Subtle dot fade */
+.dornac-logo-wrapper svg circle:nth-of-type(1),
+.dornac-logo-wrapper svg circle:nth-of-type(2) {
+    animation: logo-dot-fade 3s ease-in-out infinite;
+}
+
+.dornac-logo-wrapper svg circle:nth-of-type(2) {
+    animation-delay: 1.5s;
+}
+
+@keyframes logo-dot-fade {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* Text gradient shift */
+.dornac-logo-wrapper .logo-text span {
+    background: linear-gradient(90deg,
+            var(--text-main) 0%,
+            var(--primary) 50%,
+            var(--text-main) 100%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: logo-text-shift 5s linear infinite;
+}
+
+@keyframes logo-text-shift {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .dornac-logo-wrapper svg circle:last-of-type,
+    .dornac-logo-wrapper svg path:nth-of-type(2),
+    .dornac-logo-wrapper svg circle:nth-of-type(1),
+    .dornac-logo-wrapper svg circle:nth-of-type(2),
+    .dornac-logo-wrapper .logo-text span {
+        animation: none;
+    }
+}

@@ -1,0 +1,245 @@
+.floating-elements-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Floating Shapes */
+.floating-shape {
+    position: absolute;
+    /* Animation removed to allow JS parallax control */
+    will-change: transform;
+    filter: blur(1px);
+    opacity: 0.6;
+    transition: transform 0.1s linear;
+    /* Smooth out scroll jitter */
+}
+
+.shape-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-lg);
+    animation: morphShape 15s ease-in-out infinite;
+}
+
+/* Individual Shape Styles */
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+    animation-duration: 25s;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    top: 60%;
+    right: 10%;
+    animation-delay: 2s;
+    animation-duration: 20s;
+}
+
+.shape-3 {
+    width: 250px;
+    height: 250px;
+    top: 30%;
+    right: 5%;
+    animation-delay: 4s;
+    animation-duration: 22s;
+}
+
+.shape-4 {
+    width: 180px;
+    height: 180px;
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 6s;
+    animation-duration: 18s;
+}
+
+.shape-5 {
+    width: 220px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 3s;
+    animation-duration: 24s;
+}
+
+.shape-6 {
+    width: 160px;
+    height: 160px;
+    top: 20%;
+    left: 30%;
+    animation-delay: 5s;
+    animation-duration: 19s;
+}
+
+/* Gradient Variations */
+.gradient-purple {
+    background: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%);
+}
+
+.gradient-pink {
+    background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);
+}
+
+.gradient-blue {
+    background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 100%);
+}
+
+.gradient-yellow {
+    background: linear-gradient(135deg, #FDE68A 0%, #FCA5A5 100%);
+}
+
+.gradient-purple-light {
+    background: linear-gradient(135deg, #C4B5FD 0%, #DDD6FE 100%);
+}
+
+.gradient-pink-light {
+    background: linear-gradient(135deg, #FBCFE8 0%, #F9A8D4 100%);
+}
+
+/* Floating Circles */
+.floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(167, 139, 250, 0.3), rgba(236, 72, 153, 0.1));
+    will-change: transform;
+    filter: blur(2px);
+    transition: transform 0.1s linear;
+}
+
+.circle-1 {
+    width: 400px;
+    height: 400px;
+    top: -10%;
+    right: -5%;
+    animation-delay: 0s;
+}
+
+.circle-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -5%;
+    left: -5%;
+    animation-delay: 3s;
+}
+
+.circle-3 {
+    width: 250px;
+    height: 250px;
+    top: 40%;
+    left: 10%;
+    animation-delay: 6s;
+}
+
+.circle-4 {
+    width: 200px;
+    height: 200px;
+    bottom: 20%;
+    right: 20%;
+    animation-delay: 9s;
+}
+
+/* Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(30px, -30px) rotate(5deg);
+    }
+
+    50% {
+        transform: translate(-20px, -50px) rotate(-5deg);
+    }
+
+    75% {
+        transform: translate(20px, -30px) rotate(3deg);
+    }
+}
+
+@keyframes floatSlow {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-30px, -40px) scale(1.1);
+    }
+}
+
+@keyframes morphShape {
+
+    0%,
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    25% {
+        border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+
+    50% {
+        border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    }
+
+    75% {
+        border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .floating-shape {
+        opacity: 0.4;
+    }
+
+    .shape-1,
+    .shape-3 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .shape-2,
+    .shape-4 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .shape-5,
+    .shape-6 {
+        display: none;
+    }
+
+    .floating-circle {
+        opacity: 0.3;
+    }
+
+    .circle-1,
+    .circle-2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .circle-3,
+    .circle-4 {
+        display: none;
+    }
+}

@@ -1,0 +1,211 @@
+.home-about-section {
+    padding: var(--spacing-section) 0;
+    background: var(--bg-surface);
+    position: relative;
+    overflow: hidden;
+}
+
+.home-about-section::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-heading {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    font-weight: 800;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+}
+
+.about-subtext {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 90%;
+}
+
+.about-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 4px solid var(--border-light);
+    background: var(--bg-card);
+    aspect-ratio: 4/5;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-base);
+}
+
+.about-image-wrapper:hover .about-image {
+    transform: scale(1.08);
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(167, 139, 250, 0.2), transparent);
+    opacity: 0.5;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 5rem;
+    padding-top: 5rem;
+    border-top: 2px solid var(--border-light);
+    position: relative;
+    z-index: 1;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-light);
+}
+
+.stat-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-display);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+}
+
+@media (max-width: 992px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .about-subtext {
+        margin: 0 auto;
+    }
+
+    .about-image-wrapper {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .home-about-section {
+        padding: 80px 0;
+    }
+
+    .about-layout {
+        gap: 2.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 3rem;
+        padding-top: 3rem;
+    }
+
+    .stat-card {
+        padding: 1.5rem;
+    }
+
+    .stat-value {
+        font-size: 2.5rem;
+    }
+
+    .about-heading {
+        font-size: 1.8rem;
+    }
+
+    .about-subtext {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-about-section {
+        padding: 60px 0;
+    }
+
+    .about-layout {
+        gap: 2rem;
+    }
+
+    .about-heading {
+        font-size: 1.6rem;
+    }
+
+    .about-subtext {
+        font-size: 0.95rem;
+    }
+
+    .stats-grid {
+        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+        gap: 1.25rem;
+    }
+
+    .stat-card {
+        padding: 1.25rem;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+}

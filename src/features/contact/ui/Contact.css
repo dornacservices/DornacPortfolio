@@ -1,0 +1,258 @@
+.contact-page-wrapper {
+    padding: var(--spacing-page-top) 0 var(--spacing-section);
+    background: var(--bg-main);
+}
+
+.contact-container {
+    max-width: 1200px;
+    /*Keep slightly narrower for form focus */
+}
+
+.contact-header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 1rem 0;
+}
+
+.contact-desc {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+/* Form Styles */
+.ritovex-form {
+    background: var(--bg-surface);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+}
+
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.tech-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tech-chip {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+}
+
+.tech-chip:hover {
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+.tech-chip.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-input {
+    width: 100%;
+    background: var(--bg-hover);
+    /* Replaced #080808 */
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    color: var(--text-main);
+    /* Replaced #fff */
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    /* Ensure padding doesn't break layout */
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.submit-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Sidebar Info */
+.info-card {
+    background: var(--bg-surface);
+    /* Replaced #111 */
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    /* Replaced #fff */
+}
+
+.info-card p {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .contact-page-wrapper {
+        padding: 120px 0 80px;
+    }
+
+    .contact-header {
+        margin-bottom: 40px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .form-group-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-title {
+        font-size: 2.5rem;
+    }
+
+    .contact-desc {
+        font-size: 1rem;
+    }
+
+    .ritovex-form {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page-wrapper {
+        padding: 100px 0 60px;
+    }
+
+    .contact-header {
+        margin-bottom: 30px;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-desc {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+    }
+
+    .contact-grid {
+        gap: 2rem;
+    }
+
+    .ritovex-form {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-section label {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .tech-chip {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-input {
+        padding: 0.875rem;
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+        min-height: 44px;
+        /* Touch-friendly */
+    }
+
+    textarea.form-input {
+        min-height: 120px;
+    }
+
+    .submit-btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        min-height: 48px;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .info-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .info-card p {
+        font-size: 0.9rem;
+    }
+}

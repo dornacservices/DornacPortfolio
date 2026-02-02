@@ -1,0 +1,6 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" fill="#F8F6FF" />
+        <rect width="100%" height="100%" fill="#C4B5FD" fill-opacity="0.05" />
+        <rect x="181.48689214994107" y="38.71393089280573" width="117.35181233823006" height="199.18311738378023" fill="#A78BFA" fill-opacity="0.7090636292705801" transform="rotate(288.2383883949572, 240.1627983190561, 138.30548958469583)" /><rect x="328.46517933832206" y="444.17818180547306" width="73.26204687187114" height="183.49027889065556" fill="#DDD6FE" fill-opacity="0.6780936751092141" transform="rotate(224.68866454176205, 365.0962027742576, 535.9233212508009)" /><circle cx="420.5235770719833" cy="308.37901948676836" r="117.02684867115579" fill="#BAE6FD" fill-opacity="0.3857069714795837" /><circle cx="409.758876765048" cy="534.1255502092214" r="50.118551006669136" fill="#DDD6FE" fill-opacity="0.3324089748994152" /><circle cx="99.2238353354832" cy="265.1927554171754" r="65.16666071834767" fill="#BAE6FD" fill-opacity="0.3584506273666033" />
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="50" fill="#333" fill-opacity="0.8">Project Urbanflow</text>
+    </svg>

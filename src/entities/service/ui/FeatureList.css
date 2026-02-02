@@ -1,0 +1,189 @@
+.ritovex-features-wrapper {
+    background: var(--bg-main);
+}
+
+.ritovex-section {
+    padding: var(--spacing-section) 0;
+    position: relative;
+}
+
+.ritovex-section.alt-bg {
+    background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-main) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.ritovex-section.alt-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.section-header {
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header.text-center {
+    text-align: center;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-top: 1rem;
+    letter-spacing: -0.03em;
+    font-family: var(--font-display);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Grid */
+.ritovex-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card Style */
+.ritovex-card {
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all var(--transition-base);
+    height: 100%;
+    box-sizing: border-box;
+    min-height: 320px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.ritovex-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.ritovex-card:hover::before {
+    opacity: 1;
+}
+
+.ritovex-card:hover {
+    border-color: var(--primary-light);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(167, 139, 250, 0.03) 100%);
+}
+
+.card-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--gradient-accent);
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.ritovex-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--shadow-md);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+    color: var(--text-main);
+    transition: color var(--transition-fast);
+}
+
+.ritovex-card:hover .card-title {
+    color: var(--primary);
+}
+
+.card-desc {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.card-link {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-fast);
+}
+
+.ritovex-card:hover .card-link {
+    gap: 0.75rem;
+    transform: translateX(4px);
+}
+
+@media (max-width: 992px) {
+    .ritovex-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .ritovex-card {
+        padding: 2rem;
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ritovex-section {
+        padding: 80px 0;
+    }
+
+    .ritovex-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .card-icon {
+        width: 56px;
+        height: 56px;
+    }
+}
