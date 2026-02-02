@@ -1,7 +1,14 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-    <rect width="100%" height="100%" fill="#F0F9FF" />
-    <path d="M400 150 L250 250 L250 450 L550 450 L550 250 Z" fill="#E0F2FE" stroke="#0369A1" stroke-width="4" />
-    <rect x="350" y="300" width="100" height="150" fill="#0369A1" fill-opacity="0.2" />
-    <circle cx="400" cy="230" r="30" fill="#0369A1" fill-opacity="0.4" />
-    <text x="50%" y="530" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="45" fill="#075985">FinTech</text>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="600" fill="#F0F9FF" />
+    <defs>
+        <linearGradient id="grad-fintech" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:0.2" />
+            <stop offset="100%" style="stop-color:#38BDF8;stop-opacity:0.1" />
+        </linearGradient>
+    </defs>
+    <rect width="800" height="600" fill="url(#grad-fintech)" />
+    <path d="M400 150 L250 250 L250 450 L550 450 L550 250 Z" fill="none" stroke="#0369A1" stroke-width="8" stroke-linejoin="round" />
+    <circle cx="400" cy="300" r="80" fill="#0EA5E9" fill-opacity="0.1" stroke="#0EA5E9" stroke-width="4" stroke-dasharray="20 10" />
+    <path d="M350 450 L350 350 M450 450 L450 350 M400 450 L400 320" stroke="#0284C7" stroke-width="12" stroke-linecap="round" />
+    <circle cx="400" cy="220" r="40" fill="#38BDF8" fill-opacity="0.2" />
 </svg>

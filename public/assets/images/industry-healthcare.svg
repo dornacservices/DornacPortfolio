@@ -1,7 +1,14 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-    <rect width="100%" height="100%" fill="#FDF2F8" />
-    <rect x="350" y="150" width="100" height="300" rx="20" fill="#BE185D" fill-opacity="0.2" />
-    <rect x="250" y="250" width="300" height="100" rx="20" fill="#BE185D" fill-opacity="0.2" />
-    <path d="M380 280 L420 320 M420 280 L380 320" stroke="#BE185D" stroke-width="12" stroke-linecap="round" opacity="0.6" />
-    <text x="50%" y="530" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="45" fill="#9D174D">Healthcare</text>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="600" fill="#FDF2F8" />
+    <defs>
+        <linearGradient id="grad-health" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#EC4899;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#F472B6;stop-opacity:0.05" />
+        </linearGradient>
+    </defs>
+    <rect width="800" height="600" fill="url(#grad-health)" />
+    <rect x="360" y="150" width="80" height="300" rx="40" fill="#DB2777" fill-opacity="0.2" />
+    <rect x="250" y="260" width="300" height="80" rx="40" fill="#DB2777" fill-opacity="0.2" />
+    <circle cx="400" cy="300" r="120" fill="none" stroke="#EC4899" stroke-width="2" stroke-dasharray="15 15" opacity="0.3" />
+    <circle cx="400" cy="300" r="40" fill="#F472B6" fill-opacity="0.3" />
 </svg>

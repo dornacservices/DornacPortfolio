@@ -19,7 +19,7 @@ export default function PortfolioSection() {
                     {dornacContent.projects.map((project) => (
                         <Link to={`/project/${project.id}`} key={project.id} className="portfolio-card anim-card">
                             <div className="portfolio-visual">
-                                {/* Placeholder for project image */}
+                                <img src={project.image} alt={project.title} className="project-image" />
                                 <div className="visual-overlay">View Case Study</div>
                             </div>
                             <div className="portfolio-content">

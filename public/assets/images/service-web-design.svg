@@ -1,6 +1,14 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-        <rect width="100%" height="100%" fill="#F8F6FF" />
-        <rect width="100%" height="100%" fill="#EC4899" fill-opacity="0.05" />
-        <rect x="331.4867150776376" y="569.0472448722011" width="120.2402401170928" height="61.71766902719996" fill="#BAE6FD" fill-opacity="0.563576870837492" transform="rotate(174.2564732085434, 391.606835136184, 599.906079385801)" /><circle cx="415.695710637279" cy="386.5673132498679" r="41.60004482746103" fill="#A78BFA" fill-opacity="0.7436702857608104" /><rect x="636.2965538484593" y="475.65146974305037" width="158.47174620486976" height="53.264417564375975" fill="#FECACA" fill-opacity="0.5718705115345972" transform="rotate(41.93067871951726, 715.5324269508942, 502.2836785252384)" /><circle cx="60.865329976704" cy="561.3036012491082" r="107.06271810921623" fill="#C7D2FE" fill-opacity="0.7337520579349193" /><rect x="328.5093085047491" y="595.9370754197049" width="100.53883947724597" height="180.41703933142702" fill="#A78BFA" fill-opacity="0.6239400230494176" transform="rotate(22.87592107609953, 378.77872824337203, 686.1455950854184)" /><circle cx="696.2125020341" cy="221.02525853651508" r="33.09924875615231" fill="#FCA5A5" fill-opacity="0.5943100936322889" />
-        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="50" fill="#333" fill-opacity="0.8">Service Web Design</text>
-    </svg>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="600" fill="#F8F6FF" />
+    <defs>
+        <linearGradient id="grad-design" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#A78BFA;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#C4B5FD;stop-opacity:0.05" />
+        </linearGradient>
+    </defs>
+    <rect width="800" height="600" fill="url(#grad-design)" />
+    <circle cx="200" cy="200" r="150" fill="#A78BFA" fill-opacity="0.1" />
+    <circle cx="600" cy="400" r="200" fill="#EC4899" fill-opacity="0.05" />
+    <rect x="300" y="200" width="200" height="200" rx="20" fill="none" stroke="#8B5CF6" stroke-width="8" stroke-dasharray="30 15" />
+    <path d="M350 300 Q400 250 450 300" fill="none" stroke="#7C3AED" stroke-width="12" stroke-linecap="round" />
+</svg>
