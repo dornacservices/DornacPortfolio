@@ -38,6 +38,8 @@
     color: var(--text-muted);
     line-height: 1.7;
     max-width: 600px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .value-grid {
