@@ -128,19 +128,19 @@ export const dornacContent = {
             categories: [
                 {
                     name: "Frontend",
-                    technologies: ["React", "Next.js", "Vue.js", "TypeScript", "TailwindCSS", "GSAP"]
+                    technologies: ["React", "Next.js", "Vue.js", "TypeScript", "TailwindCSS", "Flutter/Dart", "GSAP"]
                 },
                 {
-                    name: "Backend",
-                    technologies: ["Node.js", "Python", "Go", "PostgreSQL", "MongoDB", "Redis"]
+                    name: "Backend & Database",
+                    technologies: ["Node.js", "Python", "Go", "PostgreSQL", "Supabase", "MongoDB", "Redis"]
                 },
                 {
                     name: "Mobile",
-                    technologies: ["Flutter", "React Native", "Swift", "Kotlin"]
+                    technologies: ["Flutter", "React Native", "Swift (iOS)", "Kotlin (Android)", "Cross-platform"]
                 },
                 {
                     name: "Cloud & DevOps",
-                    technologies: ["AWS", "Google Cloud", "Docker", "Kubernetes", "CI/CD", "Terraform"]
+                    technologies: ["AWS", "Google Cloud", "DigitalOcean", "Docker", "Kubernetes", "CI/CD"]
                 },
                 {
                     name: "Design",
@@ -350,6 +350,13 @@ export const dornacContent = {
             overview: "End-to-end product design from concept validation to polished user experiences.",
             icon: "box",
             image: "/assets/images/service-product-design.svg"
+        },
+        {
+            id: "mobile-app",
+            title: "Mobile App Development",
+            overview: "High-performance iOS, Android, and cross-platform apps built with Flutter and Native technologies.",
+            icon: "smartphone",
+            image: "/assets/images/service-mobile-app.svg"
         }
     ],
     // New Portfolio Data
@@ -401,6 +408,16 @@ export const dornacContent = {
                 details: ["Concept Validation", "User Journey Mapping", "Product Strategy", "Iterative Design"],
                 tech: "Research / MVP",
                 image: "/assets/images/service-product-design.svg"
+            },
+            {
+                id: "mobile-app",
+                title: "Mobile App Development",
+                subtitle: "Building the Next-Gen Mobile Experience",
+                overview: "We specialize in creating powerful, intuitive mobile applications that provide seamless user experiences across all devices. From native iOS and Android to cross-platform Flutter apps, we build with scale in mind.",
+                techStack: ["Flutter", "Dart", "Swift", "Kotlin", "Supabase", "Firebase"],
+                details: ["Native iOS & Android", "Cross-Platform Development", "Mobile UX/UI Design", "App Store Optimization"],
+                tech: "Flutter / Native",
+                image: "/assets/images/service-mobile-app.svg"
             }
         ],
         industries: [
