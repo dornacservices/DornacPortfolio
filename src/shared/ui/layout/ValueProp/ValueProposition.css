@@ -53,46 +53,40 @@
     background: var(--bg-card);
     border: 2px solid var(--border);
     border-radius: var(--radius-xl);
-    padding: 3rem 2.5rem;
+    padding: 0;
     transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
 }
 
-.value-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--gradient-primary);
-    opacity: 0;
-    transition: opacity var(--transition-base);
-    z-index: 0;
-}
-
-.value-card>* {
-    position: relative;
-    z-index: 1;
-}
-
-.value-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--primary-light);
-    background: var(--bg-hover);
-    /* Solid color hover */
+.value-icon-wrapper {
+    width: 100%;
+    height: 180px;
+    background: var(--bg-surface);
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all var(--transition-base);
 }
 
 .value-icon {
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
-    display: inline-block;
-    transition: transform var(--transition-base);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-md);
 }
 
 .value-card:hover .value-icon {
-    transform: scale(1.15) rotate(8deg);
+    transform: scale(1.1);
+}
+
+.value-card-content {
+    padding: 2.5rem;
 }
 
 .value-title {
@@ -101,6 +95,11 @@
     margin-bottom: 1.25rem;
     color: var(--text-main);
     font-family: var(--font-display);
+    transition: color var(--transition-fast);
+}
+
+.value-card:hover .value-title {
+    color: var(--primary);
 }
 
 .value-description {

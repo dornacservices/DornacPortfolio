@@ -91,32 +91,32 @@ export const dornacContent = {
             subtitle: "We deliver more than just code. We build partnerships that drive real business results.",
             items: [
                 {
-                    icon: "⚡",
+                    image: "/assets/images/value-fast.svg",
                     title: "Lightning Fast Delivery",
                     description: "Agile sprints and efficient workflows mean your product launches faster without compromising quality."
                 },
                 {
-                    icon: "🎯",
+                    image: "/assets/images/value-results.svg",
                     title: "Results-Driven Approach",
                     description: "Every decision is backed by data and focused on achieving your business objectives."
                 },
                 {
-                    icon: "🔒",
+                    image: "/assets/images/value-security.svg",
                     title: "Enterprise-Grade Security",
                     description: "Bank-level encryption, compliance-ready architecture, and rigorous security protocols."
                 },
                 {
-                    icon: "♾️",
+                    image: "/assets/images/value-scalability.svg",
                     title: "Scalable Architecture",
                     description: "Built to grow with your business, from MVP to millions of users."
                 },
                 {
-                    icon: "🤝",
+                    image: "/assets/images/value-support.svg",
                     title: "Dedicated Support",
                     description: "24/7 support and maintenance to keep your digital products running smoothly."
                 },
                 {
-                    icon: "💡",
+                    image: "/assets/images/value-innovation.svg",
                     title: "Innovation First",
                     description: "We stay ahead of the curve with cutting-edge technologies and best practices."
                 }
