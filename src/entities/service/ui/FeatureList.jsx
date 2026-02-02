@@ -22,7 +22,9 @@ export default function FeatureList() {
                     <div className="ritovex-grid anim-grid">
                         {services.map((s) => (
                             <Link to={`/service/${s.id}`} key={s.id} className="ritovex-card anim-card">
-                                <div className="card-icon">{/* Icon Placeholder could use s.icon */}</div>
+                                <div className="card-icon">
+                                    <img src={s.image} alt={s.title} className="service-icon" />
+                                </div>
                                 <h3 className="card-title">{s.title}</h3>
                                 <p className="card-desc">{s.overview}</p>
                                 <div className="card-link">Learn More &rarr;</div>
@@ -43,7 +45,9 @@ export default function FeatureList() {
                     <div className="ritovex-grid">
                         {dornacContent.pages.industries.map((i) => (
                             <Link to={`/industry/${i.id}`} key={i.id} className="ritovex-card">
-                                <div className="card-icon">{/* Icon */}</div>
+                                <div className="card-icon">
+                                    <img src={i.image} alt={i.title} className="industry-icon" />
+                                </div>
                                 <h3 className="card-title">{i.title}</h3>
                                 <p className="card-desc">{i.desc}</p>
                             </Link>

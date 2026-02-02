@@ -1,0 +1,7 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#FDF2F8" />
+    <rect x="350" y="150" width="100" height="300" rx="20" fill="#BE185D" fill-opacity="0.2" />
+    <rect x="250" y="250" width="300" height="100" rx="20" fill="#BE185D" fill-opacity="0.2" />
+    <path d="M380 280 L420 320 M420 280 L380 320" stroke="#BE185D" stroke-width="12" stroke-linecap="round" opacity="0.6" />
+    <text x="50%" y="530" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="45" fill="#9D174D">Healthcare</text>
+</svg>

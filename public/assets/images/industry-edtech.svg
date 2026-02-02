@@ -1,0 +1,7 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#F5F3FF" />
+    <path d="M250 300 L400 200 L550 300 L400 400 Z" fill="#7C3AED" fill-opacity="0.2" stroke="#7C3AED" stroke-width="4" />
+    <path d="M550 300 L550 400 C550 430 400 450 400 450 C400 450 250 430 250 400 L250 300" fill="#7C3AED" fill-opacity="0.1" stroke="#7C3AED" stroke-width="2" />
+    <rect x="390" y="250" width="20" height="100" fill="#7C3AED" opacity="0.3" />
+    <text x="50%" y="530" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="45" fill="#6D28D9">EdTech</text>
+</svg>

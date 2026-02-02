@@ -421,10 +421,10 @@ export const dornacContent = {
             }
         ],
         industries: [
-            { id: "fintech", title: "FinTech", desc: "Secure banking and payment solutions compliant with global regulations.", highlights: ["PCI-DSS Compliance", "Real-time Trading", "Fraud Detection"] },
-            { id: "healthcare", title: "Healthcare", desc: "HIPAA-compliant telemedicine and patient management systems.", highlights: ["Telemedicine", "EHR Integration", "IoT Wearables"] },
-            { id: "ecommerce", title: "E-Commerce", desc: "High-conversion storefronts with inventory intelligence.", highlights: ["Headless Commerce", "Payment Gateways", "AI Recommendations"] },
-            { id: "edtech", title: "EdTech", desc: "Interactive learning management systems.", highlights: ["Live Classrooms", "Gamification", "Progress Tracking"] }
+            { id: "fintech", title: "FinTech", desc: "Secure banking and payment solutions compliant with global regulations.", highlights: ["PCI-DSS Compliance", "Real-time Trading", "Fraud Detection"], image: "/assets/images/industry-fintech.svg" },
+            { id: "healthcare", title: "Healthcare", desc: "HIPAA-compliant telemedicine and patient management systems.", highlights: ["Telemedicine", "EHR Integration", "IoT Wearables"], image: "/assets/images/industry-healthcare.svg" },
+            { id: "ecommerce", title: "E-Commerce", desc: "High-conversion storefronts with inventory intelligence.", highlights: ["Headless Commerce", "Payment Gateways", "AI Recommendations"], image: "/assets/images/industry-ecommerce.svg" },
+            { id: "edtech", title: "EdTech", desc: "Interactive learning management systems.", highlights: ["Live Classrooms", "Gamification", "Progress Tracking"], image: "/assets/images/industry-edtech.svg" }
         ],
         company: [
             { id: "about", title: "About Dornac", subtitle: "Our Story", content: "Founded to bridge the gap between abstract art and functional code." },
