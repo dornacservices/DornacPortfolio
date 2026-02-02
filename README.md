@@ -1,16 +1,82 @@
-# React + Vite
+# Dornac Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, visually stunning portfolio website built with React and Vite, featuring advanced 3D effects, particle systems, and a premium design aesthetic.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Tech Stack**: Built with React 18 + Vite for lightning-fast development and optimal performance
+- **3D Graphics**: Interactive Three.js particle fields and visual effects
+- **Feature-Sliced Architecture**: Organized codebase following FSD principles for better scalability
+- **Responsive Design**: Fully responsive with modern CSS and glassmorphism effects
+- **Dynamic Content**: Showcases services, projects, team members, and company information
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React 18 with Vite
+- **3D Graphics**: Three.js with React Three Fiber
+- **Routing**: React Router DOM
+- **Styling**: Modern CSS with custom design system
+- **Build Tool**: Vite with HMR (Hot Module Replacement)
 
-## Expanding the ESLint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/dornacservices/DornacPortfolio.git
+
+# Navigate to project directory
+cd Dornac
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+### Build for Production
+
+```bash
+# Create production build
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 📁 Project Structure
+
+The project follows Feature-Sliced Design (FSD) architecture:
+
+```
+src/
+├── app/          # Application initialization and global styles
+├── pages/        # Page components
+├── features/     # Feature-specific components
+├── entities/     # Business entities
+├── shared/       # Shared UI components and utilities
+└── widgets/      # Complex UI blocks
+```
+
+## 🎨 Design Philosophy
+
+This portfolio emphasizes visual excellence with:
+- Curated color palettes and smooth gradients
+- Micro-animations for enhanced user experience
+- Modern typography (Google Fonts)
+- Premium, state-of-the-art design patterns
+
+## 📄 License
+
+This project is private and proprietary to Dornac Services.
+
+## 🤝 Contributing
+
+This is a private portfolio project. For inquiries, please contact Dornac Services.
