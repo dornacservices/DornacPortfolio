@@ -21,12 +21,14 @@ export default function ValueProposition() {
                     {items.map((item, index) => (
                         <div key={index} className="value-card anim-card">
                             <div className="value-icon-wrapper">
-                                <img src={item.image} alt={item.title} className="value-icon" />
+                                <IsometricIcon
+                                    type="cube"
+                                    color={index % 3 === 0 ? 'primary' : index % 3 === 1 ? 'secondary' : 'accent'}
+                                    symbol={item.icon}
+                                />
                             </div>
-                            <div className="value-card-content">
-                                <h3 className="value-title">{item.title}</h3>
-                                <p className="value-description">{item.description}</p>
-                            </div>
+                            <h3 className="value-title">{item.title}</h3>
+                            <p className="value-description">{item.description}</p>
                         </div>
                     ))}
                 </div>
