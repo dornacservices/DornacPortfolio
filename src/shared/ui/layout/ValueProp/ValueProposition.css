@@ -78,7 +78,7 @@
 }
 
 .value-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px) rotateX(5deg) rotateY(2deg);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-light);
     background: var(--bg-hover);

@@ -204,7 +204,7 @@ a {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 2rem;
-  perspective: 1200px;
+  perspective: 2000px;
 }
 
 @media (max-width: 768px) {

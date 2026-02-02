@@ -93,9 +93,10 @@
 
 .ritovex-card:hover {
     border-color: var(--primary-light);
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-8px) scale(1.02) rotateX(4deg) rotateY(-2deg);
     box-shadow: var(--shadow-xl);
     background: linear-gradient(135deg, var(--bg-card) 0%, rgba(167, 139, 250, 0.03) 100%);
+    transform-style: preserve-3d;
 }
 
 .card-icon {
@@ -112,6 +113,7 @@
     transition: all var(--transition-md);
     overflow: hidden;
     position: relative;
+    transform: translateZ(20px);
 }
 
 .service-icon,

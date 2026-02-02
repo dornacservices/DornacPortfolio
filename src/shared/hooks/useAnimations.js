@@ -12,16 +12,16 @@ export const useAnimations = () => {
         const textElements = document.querySelectorAll('.anim-text');
         textElements.forEach(el => {
             gsap.fromTo(el,
-                { y: 50, rotateX: 45, opacity: 0, transformOrigin: "top center" },
+                { y: 80, rotateX: -60, opacity: 0, transformOrigin: "top center", transformPerspective: 1000 },
                 {
                     y: 0,
                     rotateX: 0,
                     opacity: 1,
-                    duration: 1.2,
-                    ease: "power3.out",
+                    duration: 1.5,
+                    ease: "power4.out",
                     scrollTrigger: {
                         trigger: el,
-                        start: "top 90%",
+                        start: "top 95%",
                         toggleActions: "play none none reverse"
                     }
                 }
@@ -29,27 +29,27 @@ export const useAnimations = () => {
         });
 
         // 2. Cards 3D Glare Entry (Swing In from back)
-        const grids = document.querySelectorAll('.anim-grid, .ritovex-grid, .industry-grid-new'); // Added industry grid
+        const grids = document.querySelectorAll('.anim-grid, .ritovex-grid, .industry-grid-new');
         grids.forEach(grid => {
-            const cards = grid.querySelectorAll('.ritovex-card, .anim-card, .team-card, .blog-card, .portfolio-card, .testimonial-card, .stat-card, .ritovex-highlight-card'); // Full list
+            const cards = grid.querySelectorAll('.ritovex-card, .anim-card, .team-card, .blog-card, .portfolio-card, .testimonial-card, .stat-card, .ritovex-highlight-card');
 
             if (cards.length > 0) {
                 gsap.fromTo(cards,
                     {
-                        y: 50,
-                        // z: -200, // Removed for flat look
-                        // rotateX: 30, // Removed for flat look
+                        y: 100,
+                        z: -150,
+                        rotateX: 25,
                         opacity: 0,
-                        // transformPerspective: 1000 // Removed
+                        transformPerspective: 1200
                     },
                     {
                         y: 0,
-                        // z: 0,
-                        // rotateX: 0,
+                        z: 0,
+                        rotateX: 0,
                         opacity: 1,
-                        duration: 1,
-                        stagger: 0.1,
-                        ease: "back.out(1.5)", // Bouncy 3D arrive
+                        duration: 1.2,
+                        stagger: 0.15,
+                        ease: "power3.out",
                         scrollTrigger: {
                             trigger: grid,
                             start: "top 85%"
@@ -59,8 +59,41 @@ export const useAnimations = () => {
             }
         });
 
-        // Global 3D Tilt Effect removed for performance
-        // The CSS hover effects are sufficient and much more performant.
+        // 3. Hero Mouse-Follow 3D Tilt
+        const heroVisual = document.querySelector('.visual-3d-container');
+        if (heroVisual) {
+            const handleHeroMouseMove = (e) => {
+                const { clientX, clientY } = e;
+                const { left, top, width, height } = heroVisual.getBoundingClientRect();
+                const x = (clientX - left) / width - 0.5;
+                const y = (clientY - top) / height - 0.5;
+
+                gsap.to(heroVisual, {
+                    rotateY: x * 15,
+                    rotateX: -y * 15,
+                    duration: 0.5,
+                    ease: "power2.out"
+                });
+            };
+
+            const resetHeroTilt = () => {
+                gsap.to(heroVisual, {
+                    rotateY: 0,
+                    rotateX: 0,
+                    duration: 0.8,
+                    ease: "power2.out"
+                });
+            };
+
+            window.addEventListener('mousemove', handleHeroMouseMove);
+            heroVisual.addEventListener('mouseleave', resetHeroTilt);
+
+            // Clean up mouse listeners
+            return () => {
+                window.removeEventListener('mousemove', handleHeroMouseMove);
+                heroVisual.removeEventListener('mouseleave', resetHeroTilt);
+            };
+        }
 
         // Refresh ScrollTrigger
         ScrollTrigger.refresh();

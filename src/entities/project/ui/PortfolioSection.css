@@ -38,10 +38,11 @@
     min-width: 380px;
     max-width: 380px;
     flex-shrink: 0;
+    transform-style: preserve-3d;
 }
 
 .portfolio-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px) rotateY(-5deg);
 }
 
 .portfolio-visual {
